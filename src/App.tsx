@@ -1,5 +1,7 @@
+import Screen from './components/Screen';
+
 function App() {
-  return <div>salam</div>;
+  return <Screen />;
 }
 
 export default App;
