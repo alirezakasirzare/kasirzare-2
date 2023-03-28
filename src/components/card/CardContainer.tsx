@@ -8,6 +8,13 @@ const Container = tw.aside`
 
 const Item = tw.div`
   w-1/2
+  text-center
+`;
+
+const Title = tw.div`
+  font-bold
+  text-2xl
+  text-gray-600
 `;
 
 interface CardContainerProps {
@@ -20,7 +27,9 @@ function CardContainer(props: CardContainerProps) {
 
   return (
     <Container>
-      <Item>{title}</Item>
+      <Item>
+        <Title>{title}</Title>
+      </Item>
       <Item>{children}</Item>
     </Container>
   );

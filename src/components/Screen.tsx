@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import Sidebar from './layout/Sidebar';
-import CardContainer from './card/CardContainer';
+import Profile from './sections/Profile';
 
 const Container = tw.aside`
   flex
@@ -12,7 +12,7 @@ function Screen() {
   return (
     <Container>
       <Sidebar />
-      <CardContainer title="salam">salam</CardContainer>
+      <Profile />
     </Container>
   );
 }
