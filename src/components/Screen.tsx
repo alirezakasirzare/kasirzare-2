@@ -2,6 +2,7 @@ import tw from 'tailwind-styled-components';
 import Sidebar from './layout/Sidebar';
 import SectionProvider from '../context/section-context';
 import SectionSlider from './slider/SectionSlider';
+
 import { MotionConfig } from 'framer-motion';
 
 const Container = tw.div`

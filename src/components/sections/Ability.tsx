@@ -23,6 +23,8 @@ function Ability() {
     'styled-components',
     'react-query',
     'redux-tollkit',
+    'framer-motion',
+    'git',
   ];
 
   return (

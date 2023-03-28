@@ -9,7 +9,13 @@ const Image = tw.img`
 `;
 
 function Profile() {
-  const title = `سلام من علیرضا کثیرزارع هستم.`;
+  const title = (
+    <p>
+      سلام من
+      <span className="text-blue-500"> علیرضا کثیرزارع </span>
+      هستم.
+    </p>
+  );
 
   return (
     <CardContainer title={title}>

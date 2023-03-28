@@ -19,7 +19,7 @@ const Title = tw.div`
 `;
 
 interface CardContainerProps {
-  title: string;
+  title: ReactNode;
   children: ReactNode;
 }
 

@@ -9,6 +9,7 @@ const Aside = tw.aside`
   shadow-sm
   h-full w-[150px] p-4
   flex flex-col justify-between items-center
+  relative z-50
 `;
 
 const Button = tw.button`
