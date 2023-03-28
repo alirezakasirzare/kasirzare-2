@@ -3,9 +3,8 @@ import CardContainer from '../card/CardContainer';
 import profileImage from '../../assets/images/alirezakasirzare.jpg';
 
 const Image = tw.img`
-  w-full
-  h-full
-  border-8 border-blue-500 rounded-lg
+  w-full h-full
+  border-[12px] border-blue-500 rounded-3xl
 `;
 
 function Profile() {

@@ -12,13 +12,14 @@ const Aside = tw.aside`
   relative z-50
 `;
 
-const Button = tw.button`
+const Button = tw.button<{ $active: boolean }>`
   transition-all
   bg-white/30 hover:bg-white/40
   text-white
   text-lg
   p-3
   rounded-full
+  ${({ $active }) => !$active && 'invisible'}
 `;
 
 const Text = tw.div`
@@ -29,39 +30,33 @@ const Text = tw.div`
 function Sidebar() {
   const sectionValue = useContext(SectionContext);
 
+  const hasNextItem = sectionValue.items.length !== sectionValue.active + 1;
+
   const nextItem = () => {
-    if (sectionValue.changeActive) {
+    if (sectionValue.changeActive && hasNextItem) {
       sectionValue.changeActive(sectionValue.active + 1);
     }
   };
-  const hasNextItem = sectionValue.items.length !== sectionValue.active + 1;
+
+  const hasPrevItem = sectionValue.active > 0;
 
   const prevItem = () => {
-    if (sectionValue.changeActive) {
+    if (sectionValue.changeActive && hasPrevItem) {
       sectionValue.changeActive(sectionValue.active - 1);
     }
   };
-  const hasPrevItem = sectionValue.active > 0;
 
   return (
     <Aside>
-      {hasPrevItem ? (
-        <Button>
-          <FaAngleUp onClick={prevItem} />
-        </Button>
-      ) : (
-        <span></span>
-      )}
+      <Button onClick={prevItem} $active={hasPrevItem}>
+        <FaAngleUp />
+      </Button>
       <Text>
         {sectionValue.items.length} / {sectionValue.active + 1}
       </Text>
-      {hasNextItem ? (
-        <Button onClick={nextItem}>
-          <FaAngleDown />
-        </Button>
-      ) : (
-        <span></span>
-      )}
+      <Button onClick={nextItem} $active={hasNextItem}>
+        <FaAngleDown />
+      </Button>
     </Aside>
   );
 }
