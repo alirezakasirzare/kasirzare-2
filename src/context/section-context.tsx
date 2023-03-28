@@ -2,6 +2,7 @@ import Info from '../components/sections/Info';
 import Profile from '../components/sections/Profile';
 import Ability from '../components/sections/Ability';
 import { ReactNode, createContext, useState } from 'react';
+import Samples from '../components/sections/Samples';
 
 interface ContextType {
   items: { render: any; id: string }[];
@@ -22,6 +23,10 @@ const initValue: ContextType = {
     {
       render: Ability,
       id: 'ability',
+    },
+    {
+      render: Samples,
+      id: 'samples',
     },
   ],
   active: 0,
