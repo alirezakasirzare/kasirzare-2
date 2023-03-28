@@ -12,7 +12,7 @@ const Box = tw.div`
 
 interface TextSmallCardProps {
   text: string;
-  title: string;
+  title?: string;
 }
 
 function TextSmallCard(props: TextSmallCardProps) {
@@ -20,7 +20,7 @@ function TextSmallCard(props: TextSmallCardProps) {
 
   return (
     <Box>
-      {title} : <span className="text-blue-500">{text}</span>
+      {title} {title && ':'} <span className="text-blue-500">{text}</span>
     </Box>
   );
 }

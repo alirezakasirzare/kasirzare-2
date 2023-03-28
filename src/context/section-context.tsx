@@ -1,6 +1,7 @@
 import Info from '../components/sections/Info';
 import Profile from '../components/sections/Profile';
-import { ReactElement, ReactNode, createContext, useState } from 'react';
+import Ability from '../components/sections/Ability';
+import { ReactNode, createContext, useState } from 'react';
 
 interface ContextType {
   items: { render: any; id: string }[];
@@ -10,10 +11,17 @@ interface ContextType {
 
 const initValue: ContextType = {
   items: [
-    { render: Profile, id: 'profile' },
+    {
+      render: Profile,
+      id: 'profile',
+    },
     {
       render: Info,
       id: 'info',
+    },
+    {
+      render: Ability,
+      id: 'ability',
     },
   ],
   active: 0,
