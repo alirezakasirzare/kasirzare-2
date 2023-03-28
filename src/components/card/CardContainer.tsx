@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 import { ReactNode } from 'react';
 
-const Container = tw.aside`
+const Container = tw.div`
   flex items-center gap-20
   w-full h-full p-20
 `;
@@ -9,6 +9,7 @@ const Container = tw.aside`
 const Item = tw.div`
   w-1/2
   text-center
+  text-gray-500
 `;
 
 const Title = tw.div`
