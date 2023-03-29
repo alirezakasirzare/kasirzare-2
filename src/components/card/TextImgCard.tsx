@@ -16,7 +16,6 @@ const Box = motion(tw.div`
 const Image = tw.img`
   rounded-full
   w-16 h-16
-  border-2 border-blue-500
 `;
 
 const Button = tw.button`

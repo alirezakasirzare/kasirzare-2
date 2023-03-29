@@ -3,27 +3,34 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useContext, Fragment } from 'react';
 import { SectionContext } from '../../context/section-context';
 
-function SectionSlider() {
+interface SectionSliderProps {
+  direction: number;
+}
+function SectionSlider(props: SectionSliderProps) {
+  const { direction } = props;
+
   const { active, items } = useContext(SectionContext);
 
   return (
     <>
       <AnimatePresence>{active !== 0 && <Header />}</AnimatePresence>
-      <AnimatePresence>
-        {items
-          .filter((item, i) => i === active)
-          .map((item) => (
-            <motion.div
-              key={item.id}
-              initial={{ y: '100%' }}
-              animate={{ y: '0%' }}
-              exit={{ y: '-100%' }}
-              className="w-full h-full"
-            >
-              <item.render />
-            </motion.div>
-          ))}
-      </AnimatePresence>
+      <div className="w-full h-full relative">
+        <AnimatePresence>
+          {items
+            .filter((item, i) => i === active)
+            .map((item) => (
+              <motion.div
+                key={item.id}
+                initial={{ y: `${100 * direction}%` }}
+                animate={{ y: '0%' }}
+                exit={{ y: `${-100 * direction}%` }}
+                className="w-full h-full absolute top-0 left-0"
+              >
+                <item.render />
+              </motion.div>
+            ))}
+        </AnimatePresence>
+      </div>
     </>
   );
 }

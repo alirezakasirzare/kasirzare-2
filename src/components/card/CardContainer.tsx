@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 
 const Container = tw.div`
   flex flex-col md:flex-row items-center gap-5 md:gap-20
-  w-full h-full p-5 md:p-20
+  w-full h-full p-5 md:p-20 relative
 `;
 
 const Item = tw.div<{ $titleSecond?: boolean }>`
@@ -30,7 +30,7 @@ function CardContainer(props: CardContainerProps) {
   const { title, children, titleSecond } = props;
 
   return (
-    <Container>
+    <Container className="w-full h-full">
       <Item $titleSecond={!!titleSecond}>
         <Title>{title}</Title>
       </Item>

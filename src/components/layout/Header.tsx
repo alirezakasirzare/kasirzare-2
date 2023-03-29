@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const Box = motion(tw.header`
   fixed top-0 left-0 z-40
   w-full
-  bg-gray-100 
+  bg-gradient-to-b from-gray-100 to-gray-50
   h-24
   md:pr-[150px]
   flex justify-center items-center gap-5

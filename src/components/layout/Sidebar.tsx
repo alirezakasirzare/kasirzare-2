@@ -27,14 +27,24 @@ const Text = tw.div`
   text-white/80
 `;
 
-function Sidebar() {
+interface SidebarProps {
+  setDirection: (direction: number) => void;
+}
+
+function Sidebar(props: SidebarProps) {
+  const { setDirection } = props;
+
+  // sections
   const sectionValue = useContext(SectionContext);
 
   const hasNextItem = sectionValue.items.length !== sectionValue.active + 1;
 
   const nextItem = () => {
     if (sectionValue.changeActive && hasNextItem) {
-      sectionValue.changeActive(sectionValue.active + 1);
+      setDirection(1);
+      setTimeout(() => {
+        sectionValue?.changeActive?.(sectionValue.active + 1);
+      }, 10);
     }
   };
 
@@ -42,7 +52,11 @@ function Sidebar() {
 
   const prevItem = () => {
     if (sectionValue.changeActive && hasPrevItem) {
-      sectionValue.changeActive(sectionValue.active - 1);
+      setDirection(-1);
+
+      setTimeout(() => {
+        sectionValue?.changeActive?.(sectionValue.active - 1);
+      }, 10);
     }
   };
 
