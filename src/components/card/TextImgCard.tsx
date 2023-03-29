@@ -31,10 +31,11 @@ const SecondButton = tw(Button)`
 interface TextSmallCardProps {
   text: string;
   image: string;
+  path: string;
 }
 
 function TextImgCard(props: TextSmallCardProps) {
-  const { text, image } = props;
+  const { text, image, path } = props;
 
   const item = {
     hidden: { y: 20, opacity: 0 },
@@ -52,11 +53,9 @@ function TextImgCard(props: TextSmallCardProps) {
       </div>
       <div className="flex gap-2">
         <SecondButton>
-          {/* <span className="hidden md:block">پیش نمایش</span> */}
           <FaEye />
         </SecondButton>
-        <Button>
-          {/* <span className="hidden md:block">بازدید</span> */}
+        <Button $as="a" href={path} target="_blank">
           <FaLink />
         </Button>
       </div>

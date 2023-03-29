@@ -1,5 +1,4 @@
 import tw from 'tailwind-styled-components';
-import alirezaImage from '../../assets/images/alirezakasirzare.jpg';
 
 import { motion } from 'framer-motion';
 
@@ -21,10 +20,11 @@ const Image = tw.img`
 interface TextSmallCardProps {
   text: string;
   link: string;
+  image: string;
 }
 
 function TextIconCard(props: TextSmallCardProps) {
-  const { text, link } = props;
+  const { text, link, image } = props;
 
   const item = {
     hidden: { y: 20, opacity: 0 },
@@ -39,7 +39,7 @@ function TextIconCard(props: TextSmallCardProps) {
       <span className="text-blue-500 text-base" dir="ltr">
         {text}
       </span>
-      <Image src={alirezaImage} />
+      <Image src={image} />
     </Link>
   );
 }

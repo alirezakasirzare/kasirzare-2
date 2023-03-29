@@ -1,4 +1,8 @@
 import tw from 'tailwind-styled-components';
+import githubImage from '../../assets/images/contact/github.png';
+import phoneImage from '../../assets/images/contact/phone.png';
+import telegramImage from '../../assets/images/contact/telegram.png';
+import yahooImage from '../../assets/images/contact/yahoo.png';
 
 import { motion } from 'framer-motion';
 import CardContainer from '../card/CardContainer';
@@ -9,27 +13,32 @@ const TextContainer = motion(tw.div`
 `);
 
 function Connect() {
-  const title = 'راه ارتباطی دارم ؟';
+  const title = 'اطلاعات تماس چی ؟';
 
   const items: {
     text: string;
     link: string;
+    image: string;
   }[] = [
     {
-      text: '0939 358 6633',
+      text: '09393586633',
       link: '09393586633',
+      image: phoneImage,
     },
     {
       text: 'alirezakasir@yahoo.com',
       link: 'mailto://alirezakasir@yahoo.com',
+      image: yahooImage,
     },
     {
       text: '@alireza_kasir',
       link: 'http://t.me/alireza_kasir',
+      image: telegramImage,
     },
     {
       text: '@alirezakasirzare',
       link: 'http://github.com/alirezakasirzare',
+      image: githubImage,
     },
   ];
 
@@ -52,7 +61,12 @@ function Connect() {
         dir="ltr"
       >
         {items.map((item) => (
-          <TextIconCard key={item.text} text={item.text} link={item.link} />
+          <TextIconCard
+            key={item.text}
+            text={item.text}
+            link={item.link}
+            image={item.image}
+          />
         ))}
       </TextContainer>
     </CardContainer>

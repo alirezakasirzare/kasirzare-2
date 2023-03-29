@@ -30,8 +30,10 @@ function Info() {
 
   return (
     <CardContainer title={title}>
-      <p className="text-blue-500 mb-2">علیرضا هستم پسری کنجکاو و تلاشگر.</p>
-      <p className="mb-5">
+      <p className="text-blue-500 mb-2 text-right">
+        علیرضا هستم پسری کنجکاو و تلاشگر.
+      </p>
+      <p className="mb-5 text-right">
         همیشه دوست داشتم چیزی رو خلق کنم و بهش جان بدم، وقتی با برنامه نویسی
         آشنا شدم تونستم به این خواسته برسم.
         <br />
