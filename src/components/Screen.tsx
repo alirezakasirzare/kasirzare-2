@@ -6,7 +6,7 @@ import SectionSlider from './slider/SectionSlider';
 import { MotionConfig } from 'framer-motion';
 
 const Container = tw.div`
-  flex
+  flex flex-col-reverse md:flex-row
   w-full h-screen overflow-hidden
   bg-gradient-to-l from-white to-gray-50
 `;
@@ -17,7 +17,7 @@ function Screen() {
       <SectionProvider>
         <Container>
           <Sidebar />
-          <div className="w-full h-full">
+          <div className="w-full h-full pt-24 md:pt-0">
             <SectionSlider />
           </div>
         </Container>

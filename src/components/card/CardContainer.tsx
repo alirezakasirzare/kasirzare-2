@@ -3,14 +3,15 @@ import tw from 'tailwind-styled-components';
 import { ReactNode } from 'react';
 
 const Container = tw.div`
-  flex items-center gap-20
-  w-full h-full p-20
+  flex flex-col md:flex-row items-center gap-5 md:gap-20
+  w-full h-full p-5 md:p-20
 `;
 
-const Item = tw.div`
-  w-1/2
+const Item = tw.div<{ $titleSecond?: boolean }>`
+  w-full md:w-1/2
   text-center
   text-gray-500
+  ${({ $titleSecond }) => $titleSecond && 'order-10 md:order-none'}
 `;
 
 const Title = tw.div`
@@ -22,14 +23,15 @@ const Title = tw.div`
 interface CardContainerProps {
   title: ReactNode;
   children: ReactNode;
+  titleSecond?: boolean;
 }
 
 function CardContainer(props: CardContainerProps) {
-  const { title, children } = props;
+  const { title, children, titleSecond } = props;
 
   return (
     <Container>
-      <Item>
+      <Item $titleSecond={!!titleSecond}>
         <Title>{title}</Title>
       </Item>
       <Item>{children}</Item>

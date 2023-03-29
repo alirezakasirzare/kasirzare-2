@@ -5,7 +5,7 @@ import CardContainer from '../card/CardContainer';
 import TextIconCard from '../card/TextIconCard';
 
 const TextContainer = motion(tw.div`
-  grid grid-cols-2 gap-2
+  grid grid-cols-1 md:grid-cols-2 gap-2
 `);
 
 function Connect() {

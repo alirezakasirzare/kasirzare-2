@@ -8,7 +8,7 @@ const Box = motion(tw.header`
   w-full
   bg-gray-100 
   h-24
-  pr-[150px]
+  md:pr-[150px]
   flex justify-center items-center gap-5
 `);
 

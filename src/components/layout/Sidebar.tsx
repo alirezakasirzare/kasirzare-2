@@ -7,8 +7,8 @@ import { useContext } from 'react';
 const Aside = tw.aside`
   bg-blue-500
   shadow-sm
-  h-full w-[150px] p-4
-  flex flex-col justify-between items-center
+  h-[100px] md:h-full w-full md:w-[150px] p-4
+  flex flex-row-reverse md:flex-col justify-between items-center
   relative z-50
 `;
 

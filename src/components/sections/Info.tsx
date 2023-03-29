@@ -12,10 +12,10 @@ function Info() {
   const title = `من کی هستم ؟`;
 
   const items: { title: string; text: string }[] = [
+    { title: 'محل سکونت', text: 'خوزستان' },
     { title: 'وضعیت تحصیل', text: 'در حال تحصیل' },
     { title: 'مقطع تحصیل', text: 'کاردانی کامپیوتر' },
     { title: 'وضعیت خدمت', text: 'معافیت تحصیلی' },
-    { title: 'محل سکونت', text: 'خوزستان' },
   ];
 
   const itemContainer = {

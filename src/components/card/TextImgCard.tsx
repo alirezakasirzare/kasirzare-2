@@ -1,6 +1,7 @@
 import tw from 'tailwind-styled-components';
 
 import { motion } from 'framer-motion';
+import { FaEye, FaLink } from 'react-icons/fa';
 
 const Box = motion(tw.div`
   bg-gray-100
@@ -20,7 +21,7 @@ const Image = tw.img`
 
 const Button = tw.button`
   bg-blue-500 text-white
-  py-1.5 px-4 rounded-full
+  py-2 px-2 rounded-full
 `;
 
 const SecondButton = tw(Button)`
@@ -51,8 +52,14 @@ function TextImgCard(props: TextSmallCardProps) {
         <span className="text-blue-500 text-base">{text}</span>
       </div>
       <div className="flex gap-2">
-        <SecondButton>پیش نمایش</SecondButton>
-        <Button>بازدید</Button>
+        <SecondButton>
+          {/* <span className="hidden md:block">پیش نمایش</span> */}
+          <FaEye />
+        </SecondButton>
+        <Button>
+          {/* <span className="hidden md:block">بازدید</span> */}
+          <FaLink />
+        </Button>
       </div>
     </Box>
   );

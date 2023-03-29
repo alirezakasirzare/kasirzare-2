@@ -19,7 +19,7 @@ function Profile() {
   );
 
   return (
-    <CardContainer title={title}>
+    <CardContainer title={title} titleSecond>
       <Image
         src={profileImage}
         initial={{ scale: 0.7, opacity: 0 }}
