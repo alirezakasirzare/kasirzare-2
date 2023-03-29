@@ -1,9 +1,7 @@
 import tw from 'tailwind-styled-components';
 import Sidebar from './layout/Sidebar';
-import SectionProvider from '../context/section-context';
 import SectionSlider from './slider/SectionSlider';
 
-import { MotionConfig } from 'framer-motion';
 import { useState } from 'react';
 
 const Container = tw.div`
@@ -16,16 +14,12 @@ function Screen() {
   const [direction, setDirection] = useState(1);
 
   return (
-    <MotionConfig transition={{ duration: 0.5 }}>
-      <SectionProvider>
-        <Container>
-          <Sidebar setDirection={setDirection} />
-          <div className="w-full h-full pt-24 md:pt-0">
-            <SectionSlider direction={direction} />
-          </div>
-        </Container>
-      </SectionProvider>
-    </MotionConfig>
+    <Container>
+      <Sidebar setDirection={setDirection} />
+      <div className="w-full h-full pt-24 md:pt-0">
+        <SectionSlider direction={direction} />
+      </div>
+    </Container>
   );
 }
 

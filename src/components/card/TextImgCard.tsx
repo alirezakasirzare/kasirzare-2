@@ -32,10 +32,11 @@ interface TextSmallCardProps {
   text: string;
   image: string;
   path: string;
+  onSee: (item: string) => void;
 }
 
 function TextImgCard(props: TextSmallCardProps) {
-  const { text, image, path } = props;
+  const { text, image, path, onSee } = props;
 
   const item = {
     hidden: { y: 20, opacity: 0 },
@@ -52,7 +53,7 @@ function TextImgCard(props: TextSmallCardProps) {
         <span className="text-blue-500 text-base">{text}</span>
       </div>
       <div className="flex gap-2">
-        <SecondButton>
+        <SecondButton onClick={() => onSee(text)}>
           <FaEye />
         </SecondButton>
         <Button $as="a" href={path} target="_blank">
