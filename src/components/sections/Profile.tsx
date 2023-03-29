@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const Image = motion(tw.img`
   w-full h-full
-  border-[12px] border-blue-500 rounded-3xl
+  border-[8px] md:border-[12px] border-blue-500 rounded-3xl
 `);
 
 function Profile() {

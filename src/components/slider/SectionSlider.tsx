@@ -1,7 +1,8 @@
 import Header from '../layout/Header';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useContext, Fragment } from 'react';
+import { useContext } from 'react';
 import { SectionContext } from '../../context/section-context';
+import GoBottom from '../design/GoBottom';
 
 interface SectionSliderProps {
   direction: number;
@@ -30,6 +31,8 @@ function SectionSlider(props: SectionSliderProps) {
               </motion.div>
             ))}
         </AnimatePresence>
+
+        <AnimatePresence>{active === 0 && <GoBottom />}</AnimatePresence>
       </div>
     </>
   );

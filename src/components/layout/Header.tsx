@@ -12,11 +12,11 @@ const Box = motion(tw.header`
   flex justify-center items-center gap-5
 `);
 
-const Image = tw.img`
+const Image = motion(tw.img`
   rounded-full
   w-16 h-16
-  border-2 border-blue-500
-`;
+  border-2
+`);
 
 const Text = tw.h1`
   font-bold
@@ -31,7 +31,12 @@ function Header() {
       exit={{ y: '-100%', opacity: 0 }}
     >
       <Text>علیرضا کثیرزارع</Text>
-      <Image src={alirezaImage} />
+      <Image
+        src={alirezaImage}
+        initial={{ borderColor: '#f3f4f6' }}
+        animate={{ borderColor: '#3b82f6' }}
+        transition={{ repeat: Infinity, duration: 3, repeatType: 'reverse' }}
+      />
     </Box>
   );
 }

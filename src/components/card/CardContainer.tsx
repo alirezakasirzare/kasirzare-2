@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 const Container = tw.div`
   flex flex-col md:flex-row items-center gap-5 md:gap-20
   w-full h-full p-5 md:p-20 relative
+  overflow-auto
 `;
 
 const Item = tw.div<{ $titleSecond?: boolean }>`
