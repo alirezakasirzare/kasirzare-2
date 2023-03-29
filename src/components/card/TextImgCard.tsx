@@ -1,6 +1,8 @@
 import tw from 'tailwind-styled-components';
 
-const Box = tw.div`
+import { motion } from 'framer-motion';
+
+const Box = motion(tw.div`
   bg-gray-100
   rounded-full
   py-2 px-5
@@ -8,7 +10,7 @@ const Box = tw.div`
   text-sm
   flex justify-between items-center
   mx-1 mb-2
-`;
+`);
 
 const Image = tw.img`
   rounded-full
@@ -34,8 +36,16 @@ interface TextSmallCardProps {
 function TextImgCard(props: TextSmallCardProps) {
   const { text, image } = props;
 
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <Box>
+    <Box variants={item}>
       <div className="flex items-center gap-4">
         <Image src={image} />
         <span className="text-blue-500 text-base">{text}</span>

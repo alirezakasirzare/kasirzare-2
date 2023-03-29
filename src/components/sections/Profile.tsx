@@ -2,10 +2,12 @@ import tw from 'tailwind-styled-components';
 import CardContainer from '../card/CardContainer';
 import profileImage from '../../assets/images/alirezakasirzare.jpg';
 
-const Image = tw.img`
+import { motion } from 'framer-motion';
+
+const Image = motion(tw.img`
   w-full h-full
   border-[12px] border-blue-500 rounded-3xl
-`;
+`);
 
 function Profile() {
   const title = (
@@ -18,7 +20,11 @@ function Profile() {
 
   return (
     <CardContainer title={title}>
-      <Image src={profileImage} />
+      <Image
+        src={profileImage}
+        initial={{ scale: 0.7, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+      />
     </CardContainer>
   );
 }

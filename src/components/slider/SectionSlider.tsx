@@ -9,7 +9,7 @@ function SectionSlider() {
   return (
     <>
       <AnimatePresence>{active !== 0 && <Header />}</AnimatePresence>
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         {items
           .filter((item, i) => i === active)
           .map((item) => (

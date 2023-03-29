@@ -2,9 +2,11 @@ import tw from 'tailwind-styled-components';
 import CardContainer from '../card/CardContainer';
 import TextSmallCard from '../card/TextSmallCard';
 
-const TextContainer = tw.div`
+import { motion } from 'framer-motion';
+
+const TextContainer = motion(tw.div`
   flex justify-start flex-wrap
-`;
+`);
 
 function Ability() {
   const title = 'چیا بلدم ؟';
@@ -27,9 +29,24 @@ function Ability() {
     'git',
   ];
 
+  const itemContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <CardContainer title={title}>
-      <TextContainer dir="ltr">
+      <TextContainer
+        dir="ltr"
+        variants={itemContainer}
+        initial="hidden"
+        whileInView="visible"
+      >
         {items.map((item) => (
           <TextSmallCard text={item} key={item} />
         ))}
