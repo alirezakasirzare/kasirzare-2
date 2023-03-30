@@ -1,8 +1,10 @@
 import CardContainer from '../card/CardContainer';
 import TextImgCard from '../card/TextImgCard';
-import alirezaImage from '../../assets/images/alirezakasirzare.jpg';
 import abzaritImage from '../../assets/images/samples/abzarit.svg';
 import saudadeImage from '../../assets/images/samples/saudade.svg';
+import digiarvinImage from '../../assets/images/samples/digi-arvin.svg';
+import footballitImage from '../../assets/images/samples/footballit.svg';
+import musicoImage from '../../assets/images/samples/musico.svg';
 import Modal from '../modal/Modal';
 
 import { motion } from 'framer-motion';
@@ -21,37 +23,37 @@ function Samples() {
     {
       text: 'ابزاریت',
       image: abzaritImage,
-      path: 'http://google.com',
-      more: 'salam',
-      items: ['salam', 'salam'],
+      path: 'https://abzarit.kasirzare.ir',
+      more: 'ابزاریت یک جعبه ابزار آنلاین در بستر وب است.',
+      items: ['vanilla js', 'bootstrap'],
     },
     {
       text: 'سوداد',
       image: saudadeImage,
-      path: 'https://saudade.iran.liara.run/',
-      more: 'salam',
-      items: ['salam', 'salam'],
+      path: 'https://saudade.kasirzare.ir',
+      more: 'سوداد یه سایت باحال و جالبه، یه دسکتاپ اینترنتی !',
+      items: ['react', 'typescript', 'tailwindcss'],
     },
     {
       text: 'فوتبالیت',
-      image: alirezaImage,
-      path: 'http://google.com',
-      more: 'salam',
-      items: ['salam', 'salam'],
+      image: footballitImage,
+      path: 'https://footballit.kasirzare.ir',
+      more: 'فوتبالی هستی؟ بدو بیا',
+      items: ['react', 'tailwindcss'],
     },
     {
       text: 'دیجی آروین',
-      image: alirezaImage,
-      path: 'http://google.com',
-      more: 'salam',
-      items: ['salam', 'salam'],
+      image: digiarvinImage,
+      path: 'https://digi-arvin.kasirzare.ir',
+      more: 'دیجی آروین یک فروشگاه آنلاین است',
+      items: ['jquery', 'bootstrap'],
     },
     {
       text: 'موزیکو',
-      image: alirezaImage,
-      path: 'http://google.com',
-      more: 'salam',
-      items: ['salam', 'salam'],
+      image: musicoImage,
+      path: 'https://musico.kasirzare.ir',
+      more: 'با موزیکو میتونی آهنگ گوش بدی',
+      items: ['next', 'tailwindcss'],
     },
   ];
 

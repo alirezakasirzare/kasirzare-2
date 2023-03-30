@@ -27,7 +27,7 @@ function Connect() {
     },
     {
       text: 'alirezakasir@yahoo.com',
-      link: 'mailto://alirezakasir@yahoo.com',
+      link: 'mailto=alirezakasir@yahoo.com',
       image: yahooImage,
     },
     {
@@ -37,7 +37,7 @@ function Connect() {
     },
     {
       text: '@alirezakasirzare',
-      link: 'http://github.com/alirezakasirzare',
+      link: 'https://github.com/alirezakasirzare',
       image: githubImage,
     },
   ];

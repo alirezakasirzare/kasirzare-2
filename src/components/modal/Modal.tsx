@@ -8,17 +8,18 @@ import { FaSpinner } from 'react-icons/fa';
 const Box = motion(
   tw.div`
     fixed top-1/2 left-1/2
-    w-4/5 h-4/5 
+    w-[calc(100%-20px)] h-[calc(100%-20px)] md:w-4/5 md:h-4/5 
     bg-gradient-to-r from-gray-100 to-gray-50
-    rounded-3xl overflow-hidden
-    flex
+    rounded-3xl overflow-auto
+    flex flex-col md:flex-row
   `
 );
 
-const Content = tw.header`
-  w-[400px]
+const Content = tw.div`
+  w-full
+  md:max-w-[400px]
   p-6
-  flex flex-col justify-between
+  flex flex-col justify-between gap-3
   bg-blue-500 text-white
 `;
 
@@ -98,12 +99,14 @@ function Modal(props: ModalProps) {
               </div>
               <Button onClick={onClose}>بستن</Button>
             </Content>
-            <div className="flex justify-center items-center w-full h-full p-6">
+            <div className="flex justify-center items-center w-full h-screen md:h-full p-3 md:p-6">
               {loading && <FaSpinner className="animate-spin text-blue-500" />}
               <iframe
                 src={path}
                 title={title}
-                className={`w-full h-full rounded-lg ${loading && 'hidden'}`}
+                className={`w-full h-[calc(100vh-20vh)] md:h-full rounded-lg ${
+                  loading && 'hidden'
+                }`}
                 onLoad={() => setLoading(false)}
               ></iframe>
             </div>

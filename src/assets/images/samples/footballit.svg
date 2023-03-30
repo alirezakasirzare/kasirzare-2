@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="300" height="300">
+	<title>New Project</title>
+	<defs>
+		<image  width="1000" height="1000" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoAQMAAAB3bUanAAAAAXNSR0IB2cksfwAAAANQTFRFHyk3TPvjcwAAAJFJREFUeJztwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL4G7D8AAfgxlyEAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-width: 10 } 
+		.s1 { fill: #ffffff;stroke: #ffffff;stroke-width: 10 } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<path id="Shape 3" class="s0" d="m285 898h429v111h-429z"/>
+	<path id="Shape 3 copy" class="s0" d="m285-8h429v111h-429z"/>
+	<path id="Shape 1" class="s0" d="m500 655c-90.7 0-164-69.3-164-155 0-85.7 73.3-155 164-155 90.7 0 164 69.3 164 155 0 85.7-73.3 155-164 155z"/>
+	<path id="Shape 2" class="s1" d="m500 511c-7.2 0-13-4.9-13-11 0-6.1 5.8-11 13-11 7.2 0 13 4.9 13 11 0 6.1-5.8 11-13 11z"/>
+</svg>
